@@ -5,6 +5,7 @@
 	<title>Cashier App</title>
 
 	{{-- CSS --}}
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="css/app.css">
 </head>
 <body>

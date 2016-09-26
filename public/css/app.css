@@ -5765,6 +5765,35 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-style: italic; }
+
+.hero {
+  background: -webkit-linear-gradient(rgba(8, 121, 238, 0.9), rgba(8, 121, 238, 0.75)), url(http://placekitten.com/g/800/600) no-repeat top center;
+  background: linear-gradient(rgba(8, 121, 238, 0.9), rgba(8, 121, 238, 0.75)), url(http://placekitten.com/g/800/600) no-repeat top center;
+  background-size: cover;
+  height: 800px;
+  max-height: 70vh;
+  text-align: center; }
+  .hero .hero-content {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #FFF; }
+    .hero .hero-content h1, .hero .hero-content h2 {
+      margin-top: 0; }
+    .hero .hero-content h1 {
+      font-size: 70px; }
+    .hero .hero-content p {
+      font-size: 30px;
+      margin-bottom: 30px; }
+    .hero .hero-content .cta a {
+      padding: 20px 30px;
+      font-size: 30px; }
+
 #site-footer {
   padding-bottom: 30px;
   padding-top: 30px;
@@ -5776,6 +5805,9 @@ button.close {
   border-radius: 0;
   margin: 0;
   border: none; }
+  #site-header .navbar a {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-style: italic; }
 
 section {
   padding-top: 50px;
