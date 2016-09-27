@@ -5883,6 +5883,21 @@ section {
       section .section-header h2:after {
         bottom: 0; }
 
+.post-single {
+  margin-bottom: 50px;
+  margin-top: 50px; }
+  .post-single .img-container {
+    height: 500px; }
+  .post-single .card-content {
+    padding: 50px 100px; }
+    .post-single .card-content h1 {
+      font-size: 50px;
+      margin: 0 0 20px; }
+    .post-single .card-content .byline {
+      font-size: 14px;
+      color: #BBB;
+      margin-bottom: 20px; }
+
 body {
   background: #EFEFEF; }
 
