@@ -51,5 +51,19 @@ class SubscribeController extends Controller
         }
 
         // create the users subscription
+        // grab the credit card token
+        $ccToken = $request->input('cc_token');
+        $plan = $request->input('plan');
+
+        // create the subscription
+        try {
+            $user->newSubscription('main', $plan)->create($ccToken, [
+                'email' => $user->email
+            ]);            
+        } catch(\Exception $e) {
+            return back()->withErrors(['message' => 'Error creating subscription.<br>'. $e->getMessage()]);
+        }
+
+        return redirect('welcome');
     }
 }
