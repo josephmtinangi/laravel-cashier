@@ -5898,6 +5898,13 @@ section {
       color: #BBB;
       margin-bottom: 20px; }
 
+.auth-card {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 30px; }
+  .auth-card h1 {
+    text-align: center; }
+
 body {
   background: #EFEFEF; }
 
