@@ -110,9 +110,11 @@
 			</div>
 		</div>
 
+		<div class="stripe-errors"></div>
+
 		<div class="form-group">
 			<button type="submit" class="btn btn-success btn-lg btn-block">
-				Subscribe
+				Join
 			</button>
 		</div>
 
