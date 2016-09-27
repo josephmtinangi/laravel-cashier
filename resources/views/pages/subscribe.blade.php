@@ -13,6 +13,8 @@
 	<div class="card card-padded">
 
 	<form action="/subscribe" method="POST" id="subscribe-form">
+
+		{!! csrf_field() !!}
 		
 		@if (Auth::guest())
 		{{-- only show if not logged in --}}
@@ -111,6 +113,14 @@
 		</div>
 
 		<div class="stripe-errors"></div>
+
+		@if(count($errors) > 0)
+			<div class="alert alert-danger">
+				@foreach($errors->all() as $error)
+					{{ $error }} <br>
+				@endforeach
+			</div>
+		@endif
 
 		<div class="form-group">
 			<button type="submit" class="btn btn-success btn-lg btn-block">
