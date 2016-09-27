@@ -10,6 +10,8 @@ use App\User;
 
 use Auth;
 
+use App\Post;
+
 class SubscribeController extends Controller
 {
 	/**
@@ -65,5 +67,14 @@ class SubscribeController extends Controller
         }
 
         return redirect('welcome');
+    }
+
+    /**
+     * Show the welcome page
+     */
+    public function showWelcome()
+    {
+        $posts = Post::wherePremium(true)->get();
+        return view('pages.welcome', compact('posts'));
     }
 }
