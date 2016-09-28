@@ -30,7 +30,7 @@ $factory->define(App\Post::class, function(Faker\Generator $faker) {
 		'user_id' => function() { return factory(App\User::class)->create()->id; },
 		'title' => $title,
 		'slug' => $slug,
-		'image' => $faker->imageUrl(1200, 600, 'animals'),
+		'image' => $faker->imageUrl(1200, 600, rand('abstract', 'animals', 'business', 'cats', 'city', 'food', 'nightlife', 'fashion', 'people', 'nature', 'sports', 'technics', 'transport')),
 		'content' => $faker->paragraphs(10, true),
 		'premium' => rand(0, 1)
 	];
