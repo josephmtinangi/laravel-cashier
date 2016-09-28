@@ -49,13 +49,15 @@
 
 						<div class="form-group">
 							<select name="plan" id="plan" class="form-control">
-								<option value="bronze"{{ ($user->subscription('main')->stripe_plan) == 'bronze' ? 'selected' : '' }}>Bronze (TZS 9,999.99 / mwezi)</option>
-								<option value="silver"{{ ($user->subscription('main')->stripe_plan) == 'silver' ? 'selected' : '' }}>Silver (TZS 19,999.99 / mwezi)</option>
-								<option value="gold"{{ ($user->subscription('main')->stripe_plan) == 'gold' ? 'selected' : '' }}>Gold (TZS 29,999.99 / mwezi)</option>
+								<option value="bronze"{{ ($user->onPlan('bronze')) ? 'selected' : '' }}>Bronze (TZS 9,999.99 / mwezi)</option>
+								<option value="silver"{{ ($user->onPlan('silver')) ? 'selected' : '' }}>Silver (TZS 19,999.99 / mwezi)</option>
+								<option value="gold"{{ ($user->onPlan('gold')) ? 'selected' : '' }}>Gold (TZS 29,999.99 / mwezi)</option>
 							</select>
 						</div>
 
-						<button type="submit" class="btn btn-primary">Update Plan</button>
+						<button type="submit" class="btn btn-primary">
+							{{ $user->subscription('main')->onGracePeriod() ? 'Reactivate' : 'Update Plan' }}
+						</button>
 
 					</form>
 
