@@ -19,16 +19,20 @@
 			<h2>Makala ya karibuni</h2>
 		</div>
 
-		{{-- POSTS WILL GO HERE --}}
-		<div class="row">
-			
-			@foreach($posts as $post)
-				<div class="col-sm-6 col-md-4 col-lg-3">
-					@include('partials.post-card', ['post' => $post])
-				</div>
-			@endforeach
+		@foreach($posts->chunk(4) as $postSet)
+			<div class="row">
+				@foreach($postSet as $post)
+					<div class="col-sm-6 col-md-4 col-lg-3">
+						@include('partials.post-card', ['post' => $post])
+					</div>
+				@endforeach
+			</div>
+		@endforeach
 
+		<div class="row text-center">
+			{{ $posts->links() }}
 		</div>
+
 	</div>
 </section>
 

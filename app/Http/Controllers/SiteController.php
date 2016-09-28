@@ -12,7 +12,7 @@ class SiteController extends Controller
 {
     public function showHome()
     {
-    	$posts = Post::with('author')->get();
+    	$posts = Post::with('author')->paginate(8);
     	return view('pages.home', compact('posts'));
     }
 
