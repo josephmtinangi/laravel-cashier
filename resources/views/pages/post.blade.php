@@ -26,9 +26,9 @@
 
 			@if ($post->premium and ! (Auth::user() and Auth::user()->subscribed('main')))
 				<div class="jumbotron text-center">
-					<h2>Subscribe to gain access</h2>
-					<p>This great post is reserved for our paid subscribers. Join to get access!</p>
-					<a href="/subscribe" class="btn btn-lg btn-danger">Subscribe Now</a>
+					<h2>Jiunge ili uone makala maalumu.</h2>
+					<p>Hii makala maalumu ni kwa ajili ya wale walio lipia tu. Jiunge ili uweze kuona haya makala!</p>
+					<a href="/subscribe" class="btn btn-lg btn-danger">Jiunge sasa</a>
 				</div>
 			@else
 				{{-- content --}}

@@ -3,19 +3,19 @@
 @section('content')
 <div class="hero">
 	<div class="hero-content">
-		<h1>Welcome to our App</h1>
+		<h1>Karibu kwenye makala ya kila siku..</h1>
 		<p>
-			You'are going to love it!
+			Utaipenda!
 		</p>
 	</div>
 </div>
 
 <section class="container">
 	<div class="section-header">
-		<h2>Premium Posts</h2>
+		<h2>Makala maalumu</h2>
 	</div>
 
-	<p class="text-center lead">You now have access to these premium posts.</p>
+	<p class="text-center lead">Sasa unaweza kuona makala maalumu yafuatayo.</p>
 
 	{{-- POSTS WILL GO HERE --}}
 		<div class="row">

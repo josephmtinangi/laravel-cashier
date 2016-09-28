@@ -4,11 +4,11 @@
 	
 <div class="hero">
 	<div class="hero-content">
-		<h1>Daily Dose of cute animals!</h1>
-		<h2>Only $10/mo</h2>
+		<h1>Makala kila siku!</h1>
+		<h2>Ni Tshs. 1000/= kwa mwezi</h2>
 		<div class="cta">
-			<p>We promise you won&quot;t regret it.</p>
-			<a href="/subscribe" class="btn btn-danger btn-lg">Subscribe</a>			
+			<p>Tunaahidi hauta jutia kabisa.</p>
+			<a href="/subscribe" class="btn btn-danger btn-lg">Jiunge</a>			
 		</div>
 	</div>
 </div>
@@ -16,7 +16,7 @@
 <section>
 	<div class="container">
 		<div class="section-header">
-			<h2>Latest Animals</h2>
+			<h2>Makala ya karibuni</h2>
 		</div>
 
 		{{-- POSTS WILL GO HERE --}}

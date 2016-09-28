@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Cashier App</title>
+	<title>{{ config('app.name', 'Laravel Cashier') }}</title>
 
 	{{-- CSS --}}
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">

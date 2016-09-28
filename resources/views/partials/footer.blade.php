@@ -1,1 +1,1 @@
-Copyright &copy; 2015-2016 All Rights Reserved
+Hati miliki &copy; 2016 Haki zote zimehifadhiwa

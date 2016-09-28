@@ -14,21 +14,21 @@
 
 		{{-- subscription info --}}
 		<div class="section-header">
-			<h2>Your Subscription</h2>
+			<h2>Taarifa zako za kujiunga</h2>
 		</div>
 
 		{{-- check if user is on their grace period --}}
 		@if ($user->subscription('main')->onGracePeriod())
 			<div class="alert alert-danger text-center">
-				You have cancelled your account. <br>
-				You have access to Animalgram untill {{ $user->subscription('main')->ends_at->format('F d, Y') }}.
+				Umesitisha akaunti yako. <br>
+				Utaweza kupata makala maalumu mpaka {{ $user->subscription('main')->ends_at->format('F d, Y') }}.
 			</div>
 		@endif
 
 		@if ( ! $user->subscribed('main'))
 			<div class="jumbotron text-center">
-				<p>You don't have a subscription.</p>
-				<a href="/subscribe" class="btn btn-success btn-lg">Subscribe</a>
+				<p>Haujajiunga.</p>
+				<a href="/subscribe" class="btn btn-success btn-lg">Jiunge</a>
 			</div>
 		@else
 			<div class="row">
@@ -36,13 +36,13 @@
 
 					{{-- current plan --}}
 					<div class="well text-center">
-						<strong>Current Plan:</strong> {{ ucfirst($user->subscription('main')->stripe_plan) }}
+						<strong>Mpango wa sasa:</strong> {{ ucfirst($user->subscription('main')->stripe_plan) }}
 					</div>
 				</div>
 				<div class="col-sm-6">
 					
 					{{-- update subscription --}}
-					<h4>Update Subscription</h4>
+					<h4>Badilisha mpango wako</h4>
 
 					<form action="/account/subscription" method="POST">
 						{!! csrf_field() !!}
@@ -56,7 +56,7 @@
 						</div>
 
 						<button type="submit" class="btn btn-primary">
-							{{ $user->subscription('main')->onGracePeriod() ? 'Reactivate' : 'Update Plan' }}
+							{{ $user->subscription('main')->onGracePeriod() ? 'Fufua' : 'Badilisha mpango' }}
 						</button>
 
 					</form>
@@ -117,7 +117,7 @@
 					<tr>
 						<td>{{ $invoice->date()->toFormattedDateString() }}</td>
 						<td>{{ $invoice->total() }}</td>
-						<td class="col-xs-2"><a href="/account/invoices/{{ $invoice->id }}" class="btn btn-primary btn-sm">Download</a></td>
+						<td class="col-xs-2"><a href="/account/invoices/{{ $invoice->id }}" class="btn btn-primary btn-sm">Pakua</a></td>
 					</tr>
 				@endforeach
 			</table>

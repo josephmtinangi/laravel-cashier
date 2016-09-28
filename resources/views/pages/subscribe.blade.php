@@ -4,8 +4,8 @@
 
 <div class="hero">
 	<div class="hero-content">
-		<h1>You're Joining</h1>
-		<h2>Hooray!</h2>
+		<h1>Unajiunga</h1>
+		<h2>Umefanya uamuzi wa busara!</h2>
 	</div>
 </div>
 
@@ -24,15 +24,15 @@
 		</div>
 
 		<div class="form-group">
-			<label for="name">Name</label>
+			<label for="name">Jina</label>
 			<input type="text" name="name" id="name" class="form-control">
 		</div>
 		<div class="form-group">
-			<label for="email">Email</label>
+			<label for="email">Barua pepe</label>
 			<input type="email" name="email" id="email" class="form-control">
 		</div>
 		<div class="form-group">
-			<label for="password">Password</label>
+			<label for="password">Neno siri</label>
 			<input type="password" name="password" id="password" class="form-control">
 		</div>
 		@endif
@@ -124,7 +124,7 @@
 
 		<div class="form-group">
 			<button type="submit" class="btn btn-success btn-lg btn-block">
-				Join
+				Jiunge
 			</button>
 		</div>
 

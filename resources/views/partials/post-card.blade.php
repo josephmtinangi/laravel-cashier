@@ -17,7 +17,7 @@
 		{{-- free or premium --}}
 		<span class="price
 			{{ $post->premium ? 'price-premium' : 'price-free' }}">
-			{{ $post->premium ? 'Premium' : 'Free'}}
+			{{ $post->premium ? 'Maalumu' : 'Bure'}}
 		</span>		
 	</div>
 </article>
