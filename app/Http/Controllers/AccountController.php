@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Auth;
+
 class AccountController extends Controller
 {
 	/**
@@ -51,6 +53,17 @@ class AccountController extends Controller
 
         // return a redirect back to account
         return redirect('account')->with(['success' => 'Credit Card updated']);
+    }
+
+    /**
+     * Download an invoice
+     */
+    public function downloadInvoice($invoiceId)
+    {
+        return Auth::user()->downloadInvoice($invoiceId, [
+            'vendor' => 'Animalgram',
+            'product' => 'Monthly Subscription'
+        ]);
     }
 
     /**

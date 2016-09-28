@@ -27,6 +27,12 @@ Route::group(['middleware' => 'auth'], function() {
 	 * Update credit card
 	 */
 	Route::post('account/card', 'AccountController@updateCard');
+
+	/**
+	 * Download pdf
+	 */
+	Route::get('account/invoices/{invoice}', 'AccountController@downloadInvoice');
+
 	/**
 	 * Delete subscription
 	 */
