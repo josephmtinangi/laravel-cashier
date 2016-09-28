@@ -18,6 +18,7 @@
 					<li><a href="/subscribe">Subscribe</a></li>
 				@endif
 				@if(Auth::user())
+					<li><a href="/account">{{ Auth::user()->name }}</a></li>
                     <li>
                         <a href="{{ url('/logout') }}"
                             onclick="event.preventDefault();
