@@ -15,7 +15,8 @@ class AccountController extends Controller
     public function showAccount(Request $request)
     {
     	$user = $request->user();
-    	return view('pages.account', compact('user'));
+        $invoices = $user->subscribed('main') ? $user->invoices() : null;
+    	return view('pages.account', compact('user', 'invoices'));
     }
 
     /**
